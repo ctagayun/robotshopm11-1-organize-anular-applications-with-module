@@ -11,9 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { CartComponent } from './cart/cart.component';
-import { SignInComponent } from './user/sign-in/sign-in.component';
+import { UserModule } from './user/user.module';
 import { FormsModule } from '@angular/forms';
-import { TemplateFormControlsComponent } from './user/template-form-controls/template-form-controls.component';
 
 /*
  * Angular module help us organize our application and
@@ -28,16 +27,15 @@ import { TemplateFormControlsComponent } from './user/template-form-controls/tem
     CatalogComponent,
     SiteHeaderComponent,
     ProductDetailsComponent,
-    CartComponent,
-    SignInComponent,
-    TemplateFormControlsComponent
+    CartComponent
   ],
   imports: [  //*Note that router module is not imported. Why because tha router module exports it
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    UserModule  //*This is a feature module
   ],
   //* In Angular, a provider is an instruction to the Dependency Injection (DI) system
   //* on how to obtain a value for a dependency.
