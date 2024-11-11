@@ -491,10 +491,30 @@ Module11: Organizing Angular Applications with Modules
   - module is a container for:
        components, custom pipes, services, routes
        a module can use other modules. even 3rd party modules
+      - modules are optional, but why use them?
+         - most apps are started by modules
+         - when you create an app, a module is automatically created
 
-  - routing module
+  - appmodule is the main module
+     - services are not include in our modules
+
+
+  - app.routing.module - contains only one thing "routes". It is optional you can hard code the path
+      in the AppModule
+      - Note that routermodule is not imported in App.Module. Why because the router module
+        exports it already. (Note RouterLink is one of the directives included in the RouterModule)
 
   - feature modules
+     - groups a collection of components, custom pipes, and implicitly services into a
+     module for organizational purposes.
+
+     - in our application the "User" folder is a good candidate for creating it as a
+     feature module. You can take all the pieces in the user folder and put it on their
+     own folder.
+
+     - steps in creating a "Feature Module"
+         cd to root (since we have a user folder already the module will be created under user folder)
+         ng generate module user
 
   - Lazy loading
 
@@ -504,7 +524,7 @@ Module12: Testingtemplate-form-controls Angular Applications
 Useful Links
 ==================================
   Here are some useful links that are referenced in or supplement this course:
-  
+
   - Angular ngModules, providers, Lazy Loading,  https://angular.dev/guide/ngmodules/providers
 
   - Deborah's github: https://github.com/DeborahK/Angular-GettingStarted

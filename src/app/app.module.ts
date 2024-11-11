@@ -32,7 +32,7 @@ import { TemplateFormControlsComponent } from './user/template-form-controls/tem
     SignInComponent,
     TemplateFormControlsComponent
   ],
-  imports: [
+  imports: [  //*Note that router module is not imported. Why because tha router module exports it
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
@@ -40,7 +40,7 @@ import { TemplateFormControlsComponent } from './user/template-form-controls/tem
     FormsModule
   ],
   //* In Angular, a provider is an instruction to the Dependency Injection (DI) system
-  //* on how to obtain a value for a dependency. 
+  //* on how to obtain a value for a dependency.
   providers: [],
   bootstrap: [AppComponent]
 })

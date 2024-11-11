@@ -1,3 +1,6 @@
+
+ //*Note I will create a feature module inside the user folder like this:
+ //*  ng generate module user
 import { Component } from '@angular/core';
 import { IUserCredentials } from '../user.model';
 import { UserService } from '../user.service';
